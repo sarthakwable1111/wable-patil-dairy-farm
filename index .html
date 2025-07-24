@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <title>दूध संकलन माहिती</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>वाबळे पाटील दूध संकलन केंद्र 🐄</h1>
+
+    <form id="milkForm">
+      <label>आधार नंबर:
+        <input type="text" id="aadhaar" maxlength="12" pattern="[0-9]{12}" required>
+      </label>
+
+      <label>विक्रेत्याचे नाव:
+        <input type="text" id="animalName" required>
+      </label>
+
+      <label>फॅट (%):
+        <input type="number" id="fat" min="0" step="0.1" required>
+      </label>
+
+      <label>SNF (%):
+        <input type="number" id="snf" min="0" step="0.1" required>
+      </label>
+
+      <label>दूधाचे लिटर:
+        <input type="number" id="liters" min="0" step="0.1" required>
+      </label>
+
+      <label>दर (₹ प्रति लिटर):
+        <input type="number" id="rate" min="0" step="0.1" required>
+      </label>
+
+      <label>तापमान (°C):
+        <input type="number" id="degree" min="0" step="0.1" required>
+      </label>
+
+      <label>दूध प्रकार:
+        <select id="milkType" required>
+          <option value="गाय">गाय</option>
+          <option value="म्हैस">म्हैस</option>
+          <option value="शेळी">शेळी</option>
+        </select>
+      </label>
+
+      <label>तारीख:
+        <input type="text" id="date" readonly>
+      </label>
+
+      <button type="submit">जतन करा</button>
+      <button type="button" onclick="window.print()">छापा काढा</button>
+    </form>
+
+    <h2>नोंदी</h2>
+    <table id="recordsTable">
+      <thead>
+        <tr>
+          <th>आधार</th>
+          <th>विक्रेत्याचे नाव</th>
+          <th>फॅट</th>
+          <th>SNF</th>
+          <th>लिटर</th>
+          <th>दर ₹</th>
+          <th>एकूण ₹</th>
+          <th>°C</th>
+          <th>प्रकार</th>
+          <th>तारीख</th>
+          <th>डिलीट</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
